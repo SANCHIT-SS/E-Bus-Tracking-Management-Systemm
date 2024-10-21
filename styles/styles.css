@@ -1,0 +1,241 @@
+/* General styling for the system */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 10px;
+    color: #007BFF; /* Electric Blue header */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+}
+
+#map {
+    height: 600px; /* Set the height of the map */
+    width: 100%; /* Full width of the container */
+}
+
+
+/* Dropdown Menu Styling */
+.select-container {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.select-container select {
+    padding: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    font-size: 1.2em;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.select-container select:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Bus Information Section */
+.bus-info {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #007BFF, #00FF77);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+}
+
+/* Add the futuristic background */
+body {
+    background-image: url('file:///C:/Users/sanch/OneDrive/Desktop/home%20design/pop/d7847104-f4e0-4850-a2f6-b16b95ab7c5b.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    font-size: 0.9em;
+}
+/* General styling for headers */
+h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Bus Details Section */
+.bus-details {
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+}
+
+.bus-info-card {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #007BFF, #00FF77);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.bus-info-card p {
+    margin: 5px 0;
+}
+
+/* DTC Bus Schedule Section */
+.bus-schedule {
+    margin: 40px auto;
+    text-align: center;
+    width: 90%;
+}
+
+.bus-schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bus-schedule-table thead {
+    background-color: #007BFF;
+    color: white;
+}
+
+.bus-schedule-table th, .bus-schedule-table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ddd;
+}
+
+.bus-schedule-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.bus-schedule-table tr:hover {
+    background-color: #007BFF;
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* Bus schedule table responsive design */
+@media screen and (max-width: 768px) {
+    .bus-schedule-table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+    
+    .bus-schedule-table thead, .bus-schedule-table tbody, .bus-schedule-table th, .bus-schedule-table td, .bus-schedule-table tr {
+        display: block;
+    }
+
+    .bus-schedule-table thead {
+        float: left;
+    }
+
+    .bus-schedule-table tbody {
+        width: auto;
+        overflow-x: auto;
+    }
+
+    .bus-schedule-table th, .bus-schedule-table td {
+        text-align: right;
+    }
+}
+/* General Styling for the Bus Details Section */
+#bus-details {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+}
+
+#bus-details h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the bus info container to hold the location and timing details */
+.bus-info-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Card style for each section inside the bus details */
+.bus-location-card, .bus-timing-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.bus-location-card:hover, .bus-timing-card:hover {
+    transform: translateY(-10px);
+}
+
+.bus-location-card h3, .bus-timing-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #007BFF;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for location and timing details */
+#bus-location {
+    font-size: 1.2em;
+    color: #333;
+}
+
+#bus-timing p {
+    font-size: 1.1em;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Bold styling for dynamic information */
+#eta, #boarding, #destination {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .bus-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bus-location-card, .bus-timing-card {
+        width: 90%;
+    }
+}
+

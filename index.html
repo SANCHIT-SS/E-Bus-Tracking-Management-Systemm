@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bus Tracking Management System</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+</head>
+<body>
+    <header>
+        <h1>E-Bus Tracking Management System</h1>
+    </header>
+
+    <!-- Section for selecting bus route -->
+    <section id="bus-info">
+        <label for="bus-select">Select Bus Route:</label>
+        <select id="bus-select">
+            <option value="GL90">GL90: Kendriya Terminal - Rohini Sector 16</option>
+            <option value="GL22">GL22: New Delhi Railway Station Gate 2 - Anand Vihar ISBT</option>
+            <option value="GL23">GL23: ISBT Kashmiri Gate - Anand Vihar ISBT</option>
+            <option value="GL23Cluster">GL23Cluster: ISBT Maharana Pratap Bus Terminal - Anand Vihar ISBT</option>
+            <option value="GL32">GL32: Karampura Terminal - Noida Sector 34 Terminal</option>
+            <option value="GL91">GL91: Shivaji Stadium - Mundka</option>
+            <option value="RL75">RL75: New Delhi Railway Station Gate 2 - Dwarka Sector 14 Metro Station</option>
+            <option value="RL77">RL77: New Delhi Railway Station Gate 2 - Mangla Puri</option>
+            <option value="RL77Cluster">RL77 Cluster: New Delhi Railway Station Gate 2 - Mangla Puri Terminal</option>
+            <option value="RL77Extn">RL77 Extn.: New Delhi Railway Station Gate 2 - Dwarka Sector 19</option>
+            <option value="RL77A">RL77A: New Delhi Railway Station Gate 2 - Dwarka Sector 18B</option>
+        </select>
+    </section> 
+
+    <!-- Google Maps container -->
+    <section id="map"></section>
+
+   <!-- Section for bus details -->
+<section id="bus-details">
+    <h2>Bus Details</h2>
+    <div class="bus-info-container">
+        <div class="bus-location-card">
+            <h3>Bus Location</h3>
+            <div id="bus-location">Updating current location...</div>
+        </div>
+        <div class="bus-timing-card">
+            <h3>Bus Timing</h3>
+            <p>Estimated Arrival: <span id="eta">Loading...</span></p>
+            <p>Boarding Point: <span id="boarding">Loading...</span></p>
+            <p>Destination Point: <span id="destination">Loading...</span></p>
+        </div>
+    </div>
+</section>
+
+
+    <div class="bus-details">
+        <h2>Real-Time Bus Tracking Information</h2>
+        <div class="bus-info-card">
+            <p><strong>Route:</strong> GL90</p>
+            <p><strong>Source:</strong> Kendriya Terminal</p>
+            <p><strong>Destination:</strong> Rohini Sector 16</p>
+            <p><strong>Arrival Time:</strong> 10:30 AM</p>
+            <p><strong>Waiting Time:</strong> 5 minutes</p>
+        </div>
+    </div>
+    
+    <div class="bus-schedule">
+        <h2>DTC Bus Schedule</h2>
+        <table class="bus-schedule-table">
+            <thead>
+                <tr>
+                    <th>Bus No.</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GL90</td>
+                    <td>Kendriya Terminal</td>
+                    <td>Rohini Sector 16</td>
+                </tr>
+                <tr>
+                    <td>GL22</td>
+                    <td>New Delhi Railway Station Gate 2</td>
+                    <td>Anand Vihar ISBT (Viveka Nand ISBT)</td>
+                </tr>
+                <tr>
+                    <td>GL23</td>
+                    <td>ISBT / Kashmiri Gate</td>
+                    <td>Anand Vihar ISBT (Viveka Nand ISBT)</td>
+                </tr>
+               
+    
+                <tr>
+                    <td>GL23Cluster</td>
+                    <td>ISBT Maharana Pratap Bus (T)</td>
+                    <td>Anand Vihar ISBT</td>
+                </tr>
+                <tr>
+                    <td>GL32</td>
+                    <td>Karampura Terminal</td>
+                    <td>Noida Sector 34 U.P. Roadways Terminal</td>
+                </tr>
+                <tr>
+                    <td>GL91</td>
+                    <td>Shivaji Stadium</td>
+                    <td>Mundka</td>
+                </tr>
+                <tr>
+                    <td>RL75</td>
+                    <td>New Delhi Railway Station Gate 2</td>
+                    <td>Dwarka Sector 14 Metro Station</td>
+                </tr>
+                <tr>
+                    <td>RL77</td>
+                    <td>New Delhi Railway Station Gate 2</td>
+                    <td>Mangla Puri</td>
+                </tr>
+                <tr>
+                    <td>RL77Cluster</td>
+                    <td>New Delhi Railway Station Gate 2</td>
+                    <td>Mangla Puri Terminal</td>
+                </tr>
+                <tr>
+                    <td>RL77Extn</td>
+                    <td>New Delhi Railway Station Gate 2</td>
+                    <td>Dawarka Sector 19 (Pocket 2)</td>
+                </tr>
+                <tr>
+                    <td>RL77A</td>
+                    <td>New Delhi Railway Station Gate 2</td>
+                    <td>Dawarka Sector 18B</td>
+                </tr>
+            <
+             <!-- Add the rest of the schedule here -->
+            </tbody>
+        </table>
+    </div>
+        
+    </section>
+    <div class="bus-info">
+        <h2>Real-Time Tracking Information</h2>
+        <p>Route: GL90 | Source: Kendriya Terminal | Destination: Rohini Sector 16</p>
+        <p>Arrival Time: 10:30 AM | Waiting Time: 5 minutes</p>
+    </div>
+    
+
+    <!-- JavaScript to manage dynamic map and bus details -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/map.js"></script>
+</body>
+</html>
